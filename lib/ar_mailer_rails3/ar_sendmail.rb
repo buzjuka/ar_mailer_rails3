@@ -402,8 +402,8 @@ class ArMailerRails3::ARSendmail
                 [email.id, e.message, e.class, e.backtrace.join("\n\t")]
           session.reset
         end
+        sleep 5
       end
-      sleep 5
     end
   rescue Net::SMTPAuthenticationError => e
     @failed_auth_count += 1
